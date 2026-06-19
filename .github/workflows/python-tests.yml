@@ -1,4 +1,4 @@
-name: Python CI
+name: Python CI and tests
 
 on:
   push:
@@ -17,9 +17,9 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.12"
 
-      - name: Install dependencies
+      - name: Install all the dependencies and packages
         run: |
           python -m pip install --upgrade pip
           pip install pytest flake8
